@@ -1,0 +1,83 @@
+@media (max-width: 750px) {
+
+  .cell {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  #bingo {
+    grid-template-columns: repeat(5, 40px) !important;
+    grid-template-rows: repeat(5, 40px) !important;
+  }
+  main {
+    width: 80% !important;
+  }
+}
+
+main {
+    height: auto;
+    width: 60%;
+    background-color: rgb(51,51,51);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.jeu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+.jeu h1 {
+  color: white;
+  margin: 10px;
+}
+
+#bingo {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: repeat(5, 80px);
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  .cell {
+    width: 80px;
+    height: 80px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-radius: 10px;
+  }
+  .marked {
+    background-color: #4caf50;
+    color: white;
+  }
+  #message {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+  }
+  #drawnNumber {
+    font-size: 30px;
+    margin: 10px;
+    color: #ffffff;
+  }
+  #drawButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  #drawButton:hover {
+    background-color: #1976d2;
+  }

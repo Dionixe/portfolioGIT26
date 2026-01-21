@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Règles/CSS/Regle jeu.css">
+    <link rel="stylesheet" href="/Assets/Footer.css">
+    <link rel="stylesheet" href="/Assets/navbar.css">
+    <link rel="icon" href="/Assets/backgrounds/logo.png">
+    <title>Web Games</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/Accueil.html" class="logo"><img height="60px" src="/Assets/backgrounds/logo_acceuil.png"></a>
+        <nav class="navbar">
+            <a href="/Accueil.html">Acceuil</a>
+            <a href="#">A propos</a>
+            <a href="/Règles/HTML/Regle des jeux.html">Régles des jeux</a>
+            <a href="/explorer.html">Explorer</a>
+        </nav>
+    </header>
+
+    <section class="body1">
+        <aside>
+            <h1>Règles des jeux</h1>
+            <ul id="menu-accordeon">
+                <li><a href="/Pages des jeux/HTML/Jeux de stratégies.html">Jeux de stratégies</a>
+                    <ul>
+                       <li><a href="/Règles/HTML/Regle jeu echec.html">Les échecs</a></li>
+                       <li><a href="/Règles/HTML/Regle jeu dames.html">Les dames</a></li>
+                       <li><a href="/Règles/HTML/Regle jeu morpion.html">Morpion</a></li>
+                       <li><a href="#">Jeu de Go</a></li>
+                    </ul>
+                 </li>
+ 
+                  <li><a href="/Pages des jeux/HTML/Jeux de société.html">Jeux de sociétés</a>
+                    <ul>
+                        <li><a href="/Règles/HTML/Regle jeu bingo.html">Jeu de Bingo</a></li>
+                       <li><a href="#">Lien sous menu 2</a></li>
+                       <li><a href="#">Lien sous menu 2</a></li>
+                       <li><a href="#">Lien sous menu 2</a></li>
+                    </ul>
+                 </li>
+                 <li><a 
+                   href="/Pages des jeux/HTML/Jeux de cartes.html">Jeux de cartes</a>
+                    <ul>
+                        <li><a href="/Règles/HTML/Regle jeu memory.html">Memory</a></li>
+                        <li><a href="/Règles/HTML/Regle jeu du high or low.html">High or low</a></li>
+                        <li><a href="/Règles/HTML/Regle jeu blackjack.html">blackjack</a></li>
+                        <li><a href="#">Lien sous menu 3</a></li>
+                    </ul>
+                 </li>
+ 
+                 <li><a href="/Pages des jeux/HTML/Jeux de dé.html">Jeux de dé</a>
+                   <ul>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                   </ul>
+                </li>
+ 
+                <li><a href="/Pages des jeux/HTML/Jeux de cassetete-puzzle.html">Jeux de Casse-têtes/puzzles</a>
+                   <ul>
+                      <li><a href="/Règles/HTML/Regle jeu 2048.html">2048</a></li>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                   </ul>
+                </li>
+ 
+                <li><a href="/Pages des jeux/HTML/Jeux solo.html">Jeux solo</a>
+                   <ul>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                      <li><a href="#">Lien sous menu 3</a></li>
+                   </ul>
+                </li>
+              </ul>
+        </aside>
+        <main>
+            <h1>Règle du jeux des échec</h1>
+            
+            <div class="regle">
+                <p>Le jeu d’échec est un jeu de stratégie avec 7 types de pièce différente et des combinaisons variés. 
+                    Le but des échecs est de menacer le roi pour qu’il soit menace partout où il ira. 
+                    Chaque pièce agit différemment.
+                </p>
+                <div class="categorie">
+                    <h3>Le pion</h3>
+                    <p><u>Les déplacements :</u> Le pion se déplace d'une case en avant, mais ne peut pas reculer. Lors de son premier déplacement, 
+                        il peut avancer de deux cases, mais ensuite il avance d'une seule case.
+                    </p>
+                    <p> <u>Capturer :</u>  Le pion capture en diagonale, d'une case en avant à gauche ou à droite. 
+                        Lorsqu'il atteint la dernière ligne de l'échiquier (la huitième ligne pour les blancs ou la première pour les noirs), 
+                        il peut être promu en dame, tour, fou ou cavalier, généralement une dame.
+                    </p>
+                    <div class="deplacement"> <img src="/Assets/backgrounds/Déplacements/deplacement_pion.png"></div>
+                </div>
+
+                <div class="categorie">
+                    <h3>La tour</h3>
+                    <p><u>Les déplacements :</u> La tour se déplace en ligne droite, horizontalement ou verticalement, sur autant de cases que possible, 
+                        tant que son chemin n'est pas bloqué par d'autres pièces.
+                    </p>
+                    <p><u>Capturer :</u> La tour capture une pièce ennemie en se déplaçant sur la case occupée par cette pièce, 
+                        de la même manière qu'elle se déplace.
+                    </p>
+                   <div class="deplacement"> <img src="/Assets/backgrounds/Déplacements/deplacement_tour.png"></div>
+                </div>
+
+                <div class="categorie">
+                    <h3>Le cavalier</h3>
+                    <p><u>Les déplacements :</u> Le cavalier se déplace en "L", c'est-à-dire de deux cases dans une direction (horizontale ou verticale) 
+                        puis d'une case perpendiculairement, ou inversement, d'une case dans une direction puis de deux cases perpendiculairement.
+
+                    </p>
+                    <p><u>Capturer :</u> Le cavalier capture une pièce ennemie en se déplaçant sur la case occupée par cette pièce. 
+                        Il peut sauter par-dessus d'autres pièces sur son chemin, ce qui le rend unique.
+                    </p>
+                    <div class="deplacement"> <img src="/Assets/backgrounds/Déplacements/deplacement_cavalier.png"></div>
+                </div>
+                <div class="categorie">
+                    <h3>Le fou</h3>
+                    <p><u>Les déplacements :</u> Le fou se déplace uniquement en diagonale, sur autant de cases que possible, 
+                        tant que son chemin n'est pas obstrué par d'autres pièces.
+                    </p>
+                    <p><u>Capturer :</u> Le fou capture une pièce ennemie en se déplaçant sur la case occupée par cette pièce, 
+                        de la même manière qu'il se déplace. Il capture uniquement sur les cases de la même couleur de lui même (noires ou blanches).
+                    </p>
+                    <div class="deplacement"> <img src="/Assets/backgrounds/Déplacements/deplacement_fou.png"></div>
+                </div>
+                <div class="categorie">
+                    <h3>La dame</h3>
+                    <p><u>Les déplacements :</u>La dame peut se déplacer sur n'importe quelle ligne droite 
+                        (horizontale, verticale ou diagonale) sur autant de cases que désiré, tant que rien ne bloque son chemin.
+                    </p>
+                    <p><u>Capturer :</u> La dame capture une pièce ennemie en se déplaçant sur la case occupée par cette pièce, 
+                        de la même manière qu'elle se déplace.
+                    </p>
+                    <div class="deplacement"> <img src="/Assets/backgrounds/Déplacements/deplacement_dame.png"></div>
+                </div>
+                <div class="categorie">
+                    <h3>Le roi</h3>
+                    <p><u>Les déplacements :</u>Le roi peut se déplacer sur n'importe quelle case autour de lui
+                        tant que rien ne bloque son chemin et que la case n'est pas attaquée.
+                    </p>
+                    <p><u>Capturer :</u> Le roi capture une pièce ennemie en se déplaçant sur la case occupée par cette pièce, 
+                        de la même manière qu'elle se déplace. Attention, le roi ne peut pas capturer une pièce défendu pas une autre pièce.
+                    </p>
+                    <div class="deplacement"> <img src="/Assets/backgrounds/Déplacements/deplacement_roi.png"></div>
+                </div>
+
+            </div>
+            <div class="button">
+                <a href="/Les Jeux/HTML/echec. html"><button class="Jouer">Jouer !!!</button></a>
+            </div>
+        </main>
+    </section>
+</body>
+<footer>
+    <section class="flex">
+        <img class="imgfooter" src="/Assets/backgrounds/logo.png" alt="logo">
+        <div class="enplus">
+            <h3>Quelques pages en plus :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+
+        <div class="retrouver">
+            <h3>Nous retrouver sur :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+    </section>
+    <div class="droit">© 2025 WebGames. Tous droits réservés.</div>
+</footer>
+</html>

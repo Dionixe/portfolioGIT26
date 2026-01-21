@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Les Jeux/CSS/jeu de reaction.css">
+    <link rel="stylesheet" href="/Assets/Footer.css">
+    <link rel="stylesheet" href="/Assets/navbar.css">
+    <link rel="icon" href="/Assets/backgrounds/logo.png">
+    <title>Web Games</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/Accueil.html" class="logo"><img height="60px" src="/Assets/backgrounds/logo_acceuil.png"></a>
+        <nav class="navbar">
+            <a href="/Accueil.html">Acceuil</a>
+            <a href="#">A propos</a>
+            <a href="/Règles/HTML/Regle des jeux.html">Régles des jeux</a>
+            <a href="/explorer.html">Explorer</a>
+        </nav>
+    </header>
+
+        <main>
+            <div class="game">
+                <h1>🧠 Jeu de Réflexe : Dé et Logique</h1>
+                <p id="instructions">Clique sur tous les bons critères du nombre affiché !</p>
+            
+                <div id="dice-display">🎲</div>
+            
+                <div class="buttons">
+                  <button class="choice" data-type="even">⚪ Pair</button>
+                  <button class="choice" data-type="odd">⚫ Impair</button>
+                  <button class="choice" data-type="multiple3">🔢 Multiple de 3</button>
+                  <button class="choice" data-type="prime">🟡 Nombre premier</button>
+                </div>
+            
+                <p id="result">Score : 0 | Erreurs : 0</p>
+                <p id="timer">⏱ Temps restant : 30s</p>
+                <button id="start-btn">Démarrer</button>
+              </div>
+            
+              <script src="/script/jeu de reaction.js"></script>
+        </main>
+
+</body>
+<footer>
+    <section class="flex">
+        <img class="imgfooter" src="/Assets/backgrounds/logo.png" alt="logo">
+        <div class="enplus">
+            <h3>Quelques pages en plus :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+ 
+        <div class="retrouver">
+            <h3>Nous retrouver sur :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+    </section>
+    <div class="droit">© 2025 WebGames. Tous droits réservés.</div>
+ </footer>
+</html>
