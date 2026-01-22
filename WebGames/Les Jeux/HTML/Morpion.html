@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Les Jeux/CSS/Morpion.css">
+    <link rel="stylesheet" href="/Assets/Footer.css">
+    <link rel="stylesheet" href="/Assets/navbar.css">
+    <link rel="icon" href="/Assets/backgrounds/logo.png">
+    <title>Web Games</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/Accueil.html" class="logo"><img height="60px" src="/Assets/backgrounds/logo_acceuil.png"></a>
+        <nav class="navbar">
+            <a href="/Accueil.html">Acceuil</a>
+            <a href="#">A propos</a>
+            <a href="/Règles/HTML/Regle des jeux.html">Régles des jeux</a>
+            <a href="/explorer.html">Explorer</a>
+        </nav>
+    </header>
+
+        <main>
+            <h1>Morpion</h1>
+
+            <div id="gameEnd">
+                <p class="white" id="endGameStatus">...</p>
+                <input type="submit" value="Recommencer" id="reloadGame" onclick="reloadGame()">
+                <a href="/Jeux de stratégies.html"><input type="submit" value="Quitter" id="leave"></a>
+            </div>
+          
+              <div class="board">
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+              </div>
+          
+              <h1 id="gameStatus">Le joueur 1 commence!</h1>
+              <script src="/script/morpion.js"></script>
+        </main>
+
+</body>
+<footer>
+    <section class="flex">
+        <img class="imgfooter" src="/Assets/backgrounds/logo.png" alt="logo">
+        <div class="enplus">
+            <h3>Quelques pages en plus :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+ 
+        <div class="retrouver">
+            <h3>Nous retrouver sur :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+    </section>
+    <div class="droit">© 2025 WebGames. Tous droits réservés.</div>
+ </footer>
+</html>

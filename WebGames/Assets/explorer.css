@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+@media (max-width: 879px) {
+    .header {
+        flex-direction: row;
+    }
+    .navbar  {
+        flex-direction: column;
+    }
+    .navbar a {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .header a {
+        width: max-content;
+    }
+    .jeu, .jeu1 {
+        width: 90% !important;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-color: rgb(255, 87, 87) rgb(84, 84, 84);
+
+}
+
+body {
+    background: url(/Assets/backgrounds/background.png);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background:  rgb(89,89,89);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: -1px 5px 20px 2px;
+
+}
+
+.logo {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(179, 0, 0);
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+main {
+    height: 700px;
+    width: 90%;
+    background-color: rgb(51,51,51);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 35px;
+}
+.boxliste {
+    width: 90%;
+    height: auto;
+    background-color: rgb(65, 65, 65);
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+
+.liste ,.liste1, .liste2 {
+    display: flex;
+    overflow-x: auto; /* Permet le défilement horizontal */
+    white-space: nowrap; /* Empêche le passage à la ligne des éléments */
+    width: 100%; /* Largeur de la zone de défilement */
+    overflow: hidden;
+}
+
+.jeu ,.jeu1{
+    background: url(https://ledcontrole.my.canva.site/nom/media/906eb5be228370086248bcdf04c22e86.png);
+    height: 150px;
+    width: 45%;
+    margin: 10px;
+    border-radius: 20px;
+    flex: 0 0 auto; /* Les éléments ne se redimensionnent pas */
+    margin-right: 10px; /* Espacement entre les éléments */
+}
+
+
+.jeu button, .jeu1 button {
+    background-color: transparent;
+    border-radius: 20px;
+    border: black solid 4px;
+    height: 95px;
+    width: 80%;
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.jeu button:hover ,.jeu1 button:hover {
+    width: 85%;
+    height: 100px;
+    transition: 200ms;
+    background-color: white;
+    font-weight: bold;
+}
+footer {
+    height: auto;
+    background-color: rgb(78, 78, 78);
+    box-shadow: -1px 5px 20px 2px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+}
+
+.imgfooter {
+    height: 200px;
+    margin: 0px 20px 0px 20px;
+}
+
+.droit {
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.enplus { 
+    color: white;
+    margin: 20px;
+    width: 33%;
+    text-align: center;
+}
+
+.enplus ul {
+    list-style-type: none;
+}
+
+.retrouver ul {
+    list-style-type: none;
+}
+.retrouver {
+    color: white;
+    margin: 20px;
+    width: 33%;
+    text-align: center;
+    
+}

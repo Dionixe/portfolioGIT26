@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/Footer.css">
+    <link rel="stylesheet" href="/Assets/navbar.css">
+    <link rel="stylesheet" href="/Pages des jeux/CSS/pages des jeux.css">
+    <link rel="icon" href="/Assets/backgrounds/logo.png">
+    <title>Web Games</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/Accueil.html" class="logo"><img height="60px" src="/Assets/backgrounds/logo_acceuil.png"></a>
+        <nav class="navbar">
+            <a href="/Accueil.html">Acceuil</a>
+            <a href="#">A propos</a>
+            <a href="/Règles/HTML/Regle des jeux.html">Régles des jeux</a>
+            <a href="/explorer.html">Explorer</a>
+            <a id="username"></a>
+            <a href="/index.html">Se connecter</a>
+            <a href="/logout">Se déconnecter</a>
+            <script>
+                    const params = new URLSearchParams(window.location.search);
+                    const user = params.get('user');
+
+                    const loginLink = document.querySelector('a[href="/index.html"]');     // Lien "Se connecter"
+                    const logoutLink = document.querySelector('a[href="/logout"]');        // Lien "Se déconnecter"
+                    const usernameEl = document.getElementById('username');
+
+                    if (user) {
+                    const message = user === 'admin'
+                        ? '👑 Bonjour admin !'
+                        : `Bienvenue, ${user} !`;
+
+                    usernameEl.textContent = message;
+
+                    // Cache "Se connecter"
+                    if (loginLink) loginLink.style.display = 'none';
+                    } else {
+                    // Cache "Se déconnecter" si personne n'est connecté par URL
+                    if (logoutLink) logoutLink.style.display = 'none';
+                    }
+
+                    // Vérifie la session côté serveur
+                    fetch('/api/me')
+                    .then(res => res.ok ? res.json() : Promise.reject())
+                    .then(data => {
+                        usernameEl.textContent = `Bienvenue, ${data.username} !`;
+                        if (loginLink) loginLink.style.display = 'none';   // Cache "Se connecter"
+                        if (logoutLink) logoutLink.style.display = 'inline'; // Affiche "Se déconnecter"
+                    })
+                    .catch(() => {
+                        // Aucun utilisateur connecté → cacher "Se déconnecter"
+                        if (logoutLink) logoutLink.style.display = 'none';
+                    });
+            </script>
+        </nav>
+    </header>
+    <main>
+        <h1>Jeux de stratégies</h1>
+            <section class="box">
+                <div id="div_stategi_boite_test">
+                    <h1>Les échecs</h1>
+                </div>
+                <div class="barre"></div>
+                <div class="texte">
+                    <p>Les échecs sont un jeu de stratégie à deux joueurs qui se joue sur un plateau de 64 cases, avec 16 pièces pour chaque joueur. 
+                        L'objectif est de mettre le roi adverse en échec et mat, 
+                        c'est-à-dire dans une position où il ne peut plus échapper à la capture à l'aide des différentes pièces mis à disposition.
+                    </p>
+                </div>
+                <div id="boite_fin">
+                    <a href="/Règles/HTML/Regle jeu echec.html"><button class="Jouer">Règle du jeu</button></a>
+                    <a href="/Les Jeux/HTML/echec.html"><button class="Jouer">Jouer !!!</button></a>
+            </section>
+
+            <section class="box">
+                <div id="div_stategi_boite_test">
+                    <h1>Les dames</h1>
+                </div>
+                <div class="barre"></div>
+                <div class="texte">
+                    <p>Le jeu de dames est un jeu de société stratégique pour deux joueurs, 
+                        joué sur un plateau de 64 cases, semblable à celui des échecs, mais avec une disposition différente. Chaque joueur commence avec 12 pions, placés sur les cases sombres des trois premières rangées de son côté du plateau. 
+                        Le but du jeu est de capturer tous les pions adverses ou de bloquer l'adversaire de manière à ce qu'il ne puisse plus se déplacer.
+                    </p>
+                </div>
+                <div id="boite_fin">
+                    <a href="/Règles/HTML/Regle jeu dames.html"><button class="Jouer">Règle du jeu</button></a>
+                    <a href="/Les Jeux/HTML/Dames.html"><button class="Jouer">Jouer !!!</button></a>
+                </div>
+            </section>
+
+            <section class="box">
+                <div id="div_stategi_boite_test">
+                    <h1>Morpion</h1>
+                </div>
+                <div class="barre"></div>
+                <div class="texte">
+                    <p>L'objectif est d'aligner 3 symboles identiques. Les deux joueurs doivent remplir, à tour de rôle, 
+                        une case de la grille avec le symbole qui leur est attribué, généralement O et X. 
+                        Celui qui aligne, le premier, 3 symboles identiques, a gagné. L'alignement peut être, horizontal, vertical ou en diagonale.
+                    </p>
+                </div>
+                <div id="boite_fin">
+                    <a href="/Règles/HTML/Regle jeu morpion.html"><button class="Jouer">Règle du jeu</button></a>
+                    <a href="/Les Jeux/HTML/Morpion.html"><button class="Jouer">Jouer !!!</button></a>
+                </div>
+            </section>
+
+    </main>
+</body>
+<footer>
+    <section class="flex">
+        <img class="imgfooter" src="/Assets/backgrounds/logo.png" alt="logo">
+        <div class="enplus">
+            <h3>Quelques pages en plus :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+ 
+        <div class="retrouver">
+            <h3>Nous retrouver sur :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+    </section>
+    <div class="droit">© 2025 WebGames. Tous droits réservés.</div>
+ </footer>
+</html>

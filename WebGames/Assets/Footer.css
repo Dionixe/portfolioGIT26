@@ -1,0 +1,53 @@
+@media (max-width: 590px) {
+    .imgfooter {
+        height: 100px !important;
+    }
+}
+    
+footer {
+    margin-top: 20px;
+    height: auto;
+    background-color: rgb(78, 78, 78);
+    box-shadow: -1px 5px 20px 2px;
+	display : table-row;
+	height: auto; /* à titre d'exemple */
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+}
+
+.imgfooter {
+    height: 200px;
+    margin: 0px 20px 0px 20px;
+}
+
+.droit {
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.enplus { 
+    color: white;
+    margin: 20px;
+    width: 33%;
+    text-align: center;
+}
+
+.enplus ul {
+    list-style-type: none;
+}
+
+.retrouver ul {
+    list-style-type: none;
+}
+.retrouver {
+    color: white;
+    margin: 20px;
+    width: 33%;
+    text-align: center;
+}

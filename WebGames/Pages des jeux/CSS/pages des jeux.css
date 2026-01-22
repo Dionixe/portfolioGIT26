@@ -1,0 +1,128 @@
+@media (max-width: 1482px) {
+
+    .box {
+        flex-direction: column;
+        overflow: auto;
+
+    }
+    #boite_fin {
+        display: flex;
+        width: auto !important;
+    }
+    .barre {
+        width: none !important;
+        margin: 0 !important;
+        width: 0% !important;
+    }
+    .box .texte {
+        width: 90% !important;
+    }
+    .Jouer {
+        height: 60px !important;
+        width: auto !important;
+        margin: 10px !important;
+    }
+    #div_stategi_boite_test {
+        align-items: center !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+     #div_stategi_boite_test h1 {
+        text-align: center !important;
+        margin: 10px;
+    }
+}
+
+main {
+    width: 90%;
+    margin: 50px auto;
+    margin-top: 150px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 20px;
+    height: 1500px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 250px;
+    margin: 0 auto 30px;
+    background: url(https://ledcontrole.my.canva.site/nom/media/26bda2033dd93d37c09330ff7534243a.png) no-repeat center/cover;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+.box h1 {
+    margin: 10px 15px;
+    font-size: 2.5em;
+    border: solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.box .texte {
+    margin: 10px 10px 10px 10px;
+    font-size: 1.4em;
+    border-radius: 20px;
+    width: 50%;
+}
+
+.barre {
+    background-color: white;
+    width: 0.5%;
+    height: 200px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Jouer {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 15px;
+    font-size: 1.5em;
+    border: solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background: none;
+    color: black;
+    cursor: pointer;
+    margin: 10px auto;
+    height: auto;
+}
+
+.Jouer:hover {
+    border: solid rgb(255, 255, 255);
+    background: white;
+    color: black;
+    transition: 200ms;
+}
+
+#div_stategi_boite_test {
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+#boite_fin {
+    width: 20%;
+    height: 250px;
+}
+
+#boite_fin > :not(:hover) {
+    transition: 200ms;
+}

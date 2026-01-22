@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Les Jeux/CSS/dame.css">
+    <link rel="stylesheet" href="/Assets/Footer.css">
+    <link rel="stylesheet" href="/Assets/navbar.css">
+    <link rel="icon" href="/Assets/backgrounds/logo.png">
+    <title>Web Games</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/Accueil.html" class="logo"><img height="60px" src="/ssets/backgrounds/logo_acceuil.png"></a>
+        <nav class="navbar">
+            <a href="/Accueil.html">Acceuil</a>
+            <a href="#">A propos</a>
+            <a href="/Règles/HTML/Regle des jeux.html">Régles des jeux</a>
+            <a href="/explorer.html">Explorer</a>
+        </nav>
+    </header>
+
+        <main>
+            <div class="container mx-auto px-4 flex flex-col items-center">
+                <h1 class="text-4xl font-bold text-white-800 mb-6">Jeu de Dames</h1>
+
+                <div class="flex flex-col lg:flex-row gap-8 w-full">
+                    <!-- Plateau de jeu -->
+                    <div class="flex flex-col items-center">
+                        <div class="mb-4 flex justify-between w-full">
+                            <div class="text-xl font-semibold">
+                                Tour: <span id="current-player">Blanc</span>
+                            </div>
+                            <div class="text-xl">
+                                Blancs: <span id="white-count">20</span> | Noirs: <span id="black-count">20</span>
+                            </div>
+                        </div>
+
+                        <div id="board" class="board"></div>
+
+                        <div class="mt-4">
+                            <button id="new-game" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                                Nouvelle partie
+                            </button>
+                            <button id="undo-move" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded ml-2" disabled>
+                                Annuler le coup
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Panneau d'information -->
+                    <div class="w-full lg:w-1/3">
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <h2 class="text-xl font-bold mb-2">Règles du jeu</h2>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Les blancs commencent</li>
+                                <li>Déplacement diagonal uniquement</li>
+                                <li>Prises obligatoires (priorité aux prises multiples)</li>
+                                <li>Promotion en dame en atteignant la dernière ligne</li>
+                                <li>Les dames peuvent se déplacer de plusieurs cases</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg shadow-md mt-4">
+                            <h2 class="text-xl font-bold mb-2">Historique des coups</h2>
+                            <div id="move-history" class="overflow-y-auto max-h-64">
+                                <!-- Les coups seront ajoutés ici -->
+                            </div>
+                        </div>
+
+                        <div id="game-status" class="mt-4 p-3 hidden rounded-lg text-center text-xl font-bold"></div>
+                    </div>
+                </div>
+            </div>
+            <script src="/script/dame.js"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
+        </main>
+
+</body>
+<footer>
+    <section class="flex">
+        <img class="imgfooter" src="/Assets/backgrounds/logo.png" alt="logo">
+        <div class="enplus">
+            <h3>Quelques pages en plus :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+ 
+        <div class="retrouver">
+            <h3>Nous retrouver sur :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+    </section>
+    <div class="droit">© 2025 WebGames. Tous droits réservés.</div>
+ </footer>
+</html>

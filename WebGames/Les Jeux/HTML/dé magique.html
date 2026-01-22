@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Les Jeux/CSS/dé magique.css">
+    <link rel="stylesheet" href="/Assets/Footer.css">
+    <link rel="stylesheet" href="/Assets/navbar.css">
+    <link rel="icon" href="/Assets/backgrounds/logo.png">
+    <title>Web Games</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/Accueil.html" class="logo"><img height="60px" src="/Assets/backgrounds/logo_acceuil.png"></a>
+        <nav class="navbar">
+            <a href="/Accueil.html">Acceuil</a>
+            <a href="#">A propos</a>
+            <a href="/Règles/HTML/Regle des jeux.html">Régles des jeux</a>
+            <a href="/explorer.html">Explorer</a>
+        </nav>
+    </header>
+
+        <main>
+            <div class="game">
+                <h1>Dé Magique 🧙‍♂️⚔️ (2 actions)</h1>
+            
+                <div class="setup">
+                  <label for="boss-hp-input">Choisis les PV du boss : </label>
+                  <input type="number" id="boss-hp-input" min="1" max="999" value="30">
+                  <button id="start-game">▶️ Lancer la partie</button>
+                </div>
+            
+                <div class="stats" style="display:none">
+                  <p>💖 PV Joueur : <span id="player-hp">20</span></p>
+                  <p>😈 PV Boss : <span id="boss-hp">30</span></p>
+                </div>
+            
+                <div class="choices" style="display:none">
+                  <label><input type="checkbox" value="attack"> 🎯 Attaquer</label>
+                  <label><input type="checkbox" value="heal"> 💖 Se soigner</label>
+                  <label><input type="checkbox" value="shield"> 🛡️ Se protéger</label>
+                </div>
+            
+                <button id="roll" style="display:none">🎲 Valider les 2 actions</button>
+            
+                <div class="dice-row" style="display:none">
+                  <div class="die">🎯 Attaque : <span id="attack-die">-</span></div>
+                  <div class="die">💖 Soin : <span id="heal-die">-</span></div>
+                  <div class="die">🛡️ Bouclier : <span id="shield-die">-</span></div>
+                </div>
+            
+                <p id="log"></p>
+                <button id="new-game" style="display:none">🔄 Nouvelle Partie</button>
+              </div>
+              
+              <script src="/script/dé magique.js"></script>
+        </main>
+
+</body>
+<footer>
+    <section class="flex">
+        <img class="imgfooter" src="/Assets/backgrounds/logo.png" alt="logo">
+        <div class="enplus">
+            <h3>Quelques pages en plus :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+ 
+        <div class="retrouver">
+            <h3>Nous retrouver sur :</h3>
+            <br>
+            <ul>
+                <li>A propos</li>
+                <li>Nous contacter</li>
+                <li>FAQ</li>
+                <li>Mentions légal</li>
+            </ul>
+        </div>
+    </section>
+    <div class="droit">© 2025 WebGames. Tous droits réservés.</div>
+ </footer>
+</html>
