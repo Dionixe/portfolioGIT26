@@ -101,6 +101,7 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 200px;
 
 }
 
@@ -111,4 +112,8 @@ button {
     box-shadow: #b0cad6 0px 0px 10px 0px;
     max-width: 550px;
     padding:15px ;
+}
+
+.logo {
+    height: 50px;
 }

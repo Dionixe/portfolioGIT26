@@ -3,58 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Assets/Footer.css">
-    <link rel="stylesheet" href="/Assets/navbar.css">
-    <link rel="stylesheet" href="/Pages des jeux/CSS/pages des jeux.css">
-    <link rel="icon" href="/Assets/backgrounds/logo.png">
+    <link rel="stylesheet" href="../../Assets/Footer.css">
+    <link rel="stylesheet" href="../../Assets/navbar.css">
+    <link rel="stylesheet" href="../CSS/pages des jeux.css">
+    <link rel="icon" href="../../Assets/backgrounds/logo.png">
     <title>Web Games</title>
 </head>
 <body>
     <header class="header">
-        <a href="/Accueil.html" class="logo"><img height="60px" src="/Assets/backgrounds/logo_acceuil.png"></a>
+        <a href="../../Accueil.html" class="logo"><img height="60px" src="../../Assets/backgrounds/logo_acceuil.png"></a>
         <nav class="navbar">
-            <a href="/Accueil.html">Acceuil</a>
+            <a href="../../Accueil.html">Acceuil</a>
             <a href="#">A propos</a>
-            <a href="/Règles/HTML/Regle des jeux.html">Régles des jeux</a>
+            <a href="../../Règles/HTML/Regle des jeux.html">Régles des jeux</a>
             <a href="/explorer.html">Explorer</a>
             <a id="username"></a>
-            <a href="/index.html">Se connecter</a>
-            <a href="/logout">Se déconnecter</a>
-            <script>
-                    const params = new URLSearchParams(window.location.search);
-                    const user = params.get('user');
-
-                    const loginLink = document.querySelector('a[href="/index.html"]');     // Lien "Se connecter"
-                    const logoutLink = document.querySelector('a[href="/logout"]');        // Lien "Se déconnecter"
-                    const usernameEl = document.getElementById('username');
-
-                    if (user) {
-                    const message = user === 'admin'
-                        ? '👑 Bonjour admin !'
-                        : `Bienvenue, ${user} !`;
-
-                    usernameEl.textContent = message;
-
-                    // Cache "Se connecter"
-                    if (loginLink) loginLink.style.display = 'none';
-                    } else {
-                    // Cache "Se déconnecter" si personne n'est connecté par URL
-                    if (logoutLink) logoutLink.style.display = 'none';
-                    }
-
-                    // Vérifie la session côté serveur
-                    fetch('/api/me')
-                    .then(res => res.ok ? res.json() : Promise.reject())
-                    .then(data => {
-                        usernameEl.textContent = `Bienvenue, ${data.username} !`;
-                        if (loginLink) loginLink.style.display = 'none';   // Cache "Se connecter"
-                        if (logoutLink) logoutLink.style.display = 'inline'; // Affiche "Se déconnecter"
-                    })
-                    .catch(() => {
-                        // Aucun utilisateur connecté → cacher "Se déconnecter"
-                        if (logoutLink) logoutLink.style.display = 'none';
-                    });
-            </script>
+            <a href="../../index.html">Se connecter</a>
+            <a href="../../logout">Se déconnecter</a>
         </nav>
     </header>
     <main>
@@ -71,8 +36,8 @@
                     </p>
                 </div>
                 <div id="boite_fin">
-                    <a href="/Règles/HTML/Regle jeu echec.html"><button class="Jouer">Règle du jeu</button></a>
-                    <a href="/Les Jeux/HTML/echec.html"><button class="Jouer">Jouer !!!</button></a>
+                    <a href="../../Règles/HTML/Regle jeu echec.html"><button class="Jouer">Règle du jeu</button></a>
+                    <a href="../../Les Jeux/HTML/echec.html"><button class="Jouer">Jouer !!!</button></a>
             </section>
 
             <section class="box">
@@ -87,8 +52,8 @@
                     </p>
                 </div>
                 <div id="boite_fin">
-                    <a href="/Règles/HTML/Regle jeu dames.html"><button class="Jouer">Règle du jeu</button></a>
-                    <a href="/Les Jeux/HTML/Dames.html"><button class="Jouer">Jouer !!!</button></a>
+                    <a href="../../Règles/HTML/Regle jeu dames.html"><button class="Jouer">Règle du jeu</button></a>
+                    <a href="../../Les Jeux/HTML/Dames.html"><button class="Jouer">Jouer !!!</button></a>
                 </div>
             </section>
 
@@ -104,8 +69,8 @@
                     </p>
                 </div>
                 <div id="boite_fin">
-                    <a href="/Règles/HTML/Regle jeu morpion.html"><button class="Jouer">Règle du jeu</button></a>
-                    <a href="/Les Jeux/HTML/Morpion.html"><button class="Jouer">Jouer !!!</button></a>
+                    <a href="../../Règles/HTML/Regle jeu morpion.html"><button class="Jouer">Règle du jeu</button></a>
+                    <a href="../../Les Jeux/HTML/Morpion.html"><button class="Jouer">Jouer !!!</button></a>
                 </div>
             </section>
 
@@ -113,7 +78,7 @@
 </body>
 <footer>
     <section class="flex">
-        <img class="imgfooter" src="/Assets/backgrounds/logo.png" alt="logo">
+        <img class="imgfooter" src="../../Assets/backgrounds/logo.png" alt="logo">
         <div class="enplus">
             <h3>Quelques pages en plus :</h3>
             <br>
