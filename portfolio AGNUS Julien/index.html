@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Julien AGNUS – Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--nav:#414b5b;--bleu:#b2cbd7;--bleu2:#d3e5ed;--clair:#ecfaff;--btn:#8aa7b5;--acc:#6b80b5;--vert:#00c060;--ombre:0 12px 34px rgba(45,62,80,.16)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Ubuntu,sans-serif;color:var(--nav);background:var(--clair);line-height:1.6}
+a{color:inherit}img{max-width:100%;display:block}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(65,75,91,.95);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+nav .w{display:flex;justify-content:space-between;align-items:center;height:66px}
+nav b{color:#fff;font-size:1.2rem;letter-spacing:.5px}
+nav ul{display:flex;list-style:none;gap:6px}
+nav li a{color:#dbe6ee;text-decoration:none;padding:8px 14px;border-radius:30px;font-weight:500;transition:.2s}
+nav li a:hover,nav li a.on{background:rgba(255,255,255,.14);color:#fff}
+/* hero */
+.hero{background:radial-gradient(circle at 80% 20%,#5d6f86,transparent 55%),linear-gradient(135deg,#414b5b,#2f3846);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.5;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='600' fill='none' stroke='%238da3ff' stroke-opacity='.25'%3E%3Cpath d='M-20 80C250 20 380 420 760 330M-20 110C250 50 380 450 760 360M-20 140C250 80 380 480 760 390M1420 520C1150 580 1000 200 700 260M1420 490C1150 550 1000 170 700 230'/%3E%3C/svg%3E") center/cover}
+.hero .w{position:relative;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding-top:90px;padding-bottom:100px}
+.tag{display:inline-block;font-family:'Space Mono',monospace;background:rgba(178,203,215,.18);border:1px solid var(--bleu);color:var(--bleu);padding:6px 16px;border-radius:30px;font-size:.95rem;margin-bottom:22px}
+.tag::before{content:"● ";color:var(--vert)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.1;margin-bottom:18px}
+.hero h1 span{color:var(--bleu)}
+.hero p{color:#cfdce5;max-width:520px;font-size:1.1rem;margin-bottom:32px}
+.btn{display:inline-block;background:var(--bleu);color:var(--nav);font-weight:700;text-decoration:none;padding:13px 30px;border-radius:40px;transition:.25s;margin:0 10px 10px 0}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.25)}
+.btn.o{background:none;color:#fff;border:2px solid var(--bleu)}
+.avatar{justify-self:center;width:290px;height:290px;border-radius:50%;padding:8px;background:conic-gradient(var(--bleu),var(--acc),var(--bleu2),var(--bleu));box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:6px solid #2f3846}
+/* sections */
+section{padding:84px 0}
+.alt{background:var(--bleu2)}.blue{background:var(--bleu)}
+.eyebrow{font-family:'Space Mono',monospace;color:var(--acc);font-size:.9rem;text-transform:uppercase;letter-spacing:2px}
+h2{font-size:2.4rem;margin:4px 0 12px}
+h2::after{content:"";display:block;width:70px;height:5px;border-radius:4px;background:linear-gradient(90deg,var(--acc),var(--btn));margin-top:10px}
+.lead{max-width:720px;margin:14px 0 40px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.stats{display:grid;gap:16px}
+.stat{background:#fff;border-radius:18px;padding:20px 24px;box-shadow:var(--ombre);border-left:6px solid var(--acc)}
+.stat b{display:block;font-size:1.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px)}
+.card img{height:210px;width:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.06)}
+.card .im{overflow:hidden}
+.cb{padding:24px;flex:1;display:flex;flex-direction:column}
+.cb h3{font-size:1.25rem;margin-bottom:8px}
+.cb p{font-size:.97rem;flex:1}
+.cb .btn{align-self:flex-start;margin:18px 0 0;background:var(--nav);color:#fff;padding:10px 22px;font-size:.95rem}
+.chip{display:inline-block;background:var(--bleu2);border-radius:30px;padding:3px 14px;font-size:.82rem;font-weight:500;margin-bottom:12px;align-self:flex-start}
+.wide{grid-column:1/-1;flex-direction:row}.wide .im{flex:1}.wide img{height:100%;min-height:260px}.wide .cb{flex:1.1}
+/* timeline stages */
+.tl{position:relative;margin-left:14px;padding-left:34px;border-left:4px solid var(--btn)}
+.tl .it{position:relative;background:#fff;border-radius:20px;padding:24px 28px;box-shadow:var(--ombre);margin-bottom:28px;display:grid;grid-template-columns:1fr 260px;gap:26px;align-items:center}
+.tl .it::before{content:"";position:absolute;left:-47px;top:30px;width:20px;height:20px;border-radius:50%;background:var(--acc);border:5px solid var(--clair)}
+.tl .it img{border-radius:14px;height:170px;width:100%;object-fit:cover}
+.tl small{color:var(--acc);font-weight:700}
+/* formation */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.row{background:#fff;border-radius:18px;padding:22px 26px;box-shadow:var(--ombre);margin-bottom:18px;display:flex;gap:20px;align-items:center}
+.row img{width:76px;height:76px;border-radius:14px;flex:none}
+.row em{display:block;font-size:.93rem}
+.row a{font-size:.9rem}
+.ok{display:inline-block;margin-top:8px;color:#04894a;background:rgba(0,192,96,.13);padding:2px 14px;border-radius:30px;font-weight:700;font-size:.9rem}
+.row .btn{margin:8px 0 0;padding:7px 16px;font-size:.88rem;background:var(--btn)}
+/* compétences */
+.bar{margin-bottom:22px}.bar span{display:flex;justify-content:space-between;font-weight:500;margin-bottom:6px}
+.bar i{display:block;height:12px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:inset 0 1px 3px rgba(0,0,0,.15)}
+.bar b{display:block;height:100%;width:var(--v);border-radius:8px;background:linear-gradient(90deg,var(--acc),#8fb4d1);transform:scaleX(0);transform-origin:left;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.show .bar b{transform:none}
+.chips{display:flex;flex-wrap:wrap;gap:14px}
+.sw{background:#fff;border:2px solid var(--bleu);border-radius:40px;padding:8px 20px 8px 10px;display:flex;align-items:center;gap:12px;font-weight:500;transition:.25s}
+.sw:hover{transform:translateY(-4px);border-color:var(--acc)}.sw img{width:32px;height:32px;object-fit:contain}
+/* contact */
+.contact{background:linear-gradient(135deg,#414b5b,#2f3846);color:#fff}
+.contact h2::after{background:var(--bleu)}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.box{background:rgba(255,255,255,.08);border:1px solid rgba(178,203,215,.3);border-radius:22px;padding:28px}
+.box h3{margin-bottom:16px}
+.ct{display:flex;align-items:center;gap:16px;margin:14px 0}.ct img{width:34px;height:32px;object-fit:contain;filter:invert(1) brightness(1.4)}
+.box .btn{display:block;text-align:center;margin:0 0 12px;background:var(--bleu)}
+footer{background:#2a323e;color:#aebdc8;text-align:center;padding:22px;font-size:.92rem}
+.rv{opacity:0;transform:translateY(26px);transition:.7s}.rv.show{opacity:1;transform:none}
+@media(max-width:820px){.hero .w,.about,.two,.cg{grid-template-columns:1fr}.avatar{width:220px;height:220px;order:-1}.wide{flex-direction:column}.tl .it{grid-template-columns:1fr}nav li a{padding:6px 9px;font-size:.88rem}nav b{display:none}nav .w{justify-content:center}.hero .w{padding-top:50px;padding-bottom:60px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.rv{opacity:1;transform:none}.bar b{transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="w"><b>J. AGNUS</b>
+<ul><li><a href="#accueil">Accueil</a></li><li><a href="procedures.html">Procédures</a></li><li><a href="lycee.html">Expériences</a></li><li><a href="stages.html">Stages</a></li><li><a href="#formations">Certifications</a></li><li><a href="#competences">Compétences</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero" id="accueil"><div class="w">
+  <div><span class="tag">Recherche un stage</span>
+  <h1>Bonjour, je suis<br><span>Julien AGNUS</span></h1>
+  <p>Étudiant en informatique, passionné par les réseaux et les systèmes. Voici mon portfolio : mes projets, mes stages, mes certifications et mes compétences.</p>
+  <a class="btn" href="pdf/CV Julien Agnus.pdf-1.pdf">Voir le CV !</a><a class="btn" href="pdf/Lettre de Motivation.pdf">Voir ma lettre de motivation !</a><a class="btn o" href="#contact">Me contacter</a></div>
+  <div class="avatar"><img src="images/avatar.jpg" alt="Julien AGNUS"></div>
+</div></header>
+
+<section class="alt"><div class="w about rv">
+  <div><span class="eyebrow">Portfolio</span><h2>À propos de moi</h2><p class="lead" style="margin-bottom:0">Actuellement au Campus Saint-Aspais de Melun en BTS SIO 2 option SISR.   J’ai fais un BAC Pro SN option RISC  à l’Institution Saint-Aspais. Durant ces années, j’ai pu réaliser différents stage et pu acquérir différentes compétence pendant les projets au lycée que vous pourrai retrouver dans mon portfolio ainsi que quelques document pour les illustrés.</p></div>
+  <div class="stats"><div class="stat"><b>Bac Pro SN – RISC</b>mention bien</div><div class="stat"><b>BTS SIO</b>en cours</div></div>
+</div></section>
+
+<section id="experiences"><div class="w">
+  <div class="rv"><span class="eyebrow">Mes projets</span><h2>Projets réalisés au cours de ma scolarité</h2>
+  <p class="lead">Tout au long de ma scolarité au lycée et au BTS, j’ai eu l’occasion de faire différents projets pour mieux comprendre les cours théoriques. Ils étaient souvent effectués en groupe ou avec l’ensemble de ma classe, ce qui nous a permis de nous familiariser avec du vrai matériel réseau et d’approfondir nos connaissances.</p></div>
+  <div class="grid">
+    <article class="card rv"><div class="im"><img src="images/tkt.jpg" alt=""></div><div class="cb"><span class="chip">BTS SIO – Saint-Aspais</span><h3>Infrastructure réseau complète</h3><p>En groupe durant ma seconde année de BTS SIO, nous avons puis réaliser une infrastructure réseau avec un cahier des charge fourni. Le rééseau était composé de plusieurs serveurs donc 3 proxmox avec des Pfsenses. Chaque proxmox avec des serveurs avec des services différents comme : Nextclout, Wazuh, Grafana, TFTP, GLPI, Postfix ainsi que de la téléphonie IP. </p><a class="btn" href="lycee.html">Information sur le projet !</a></div></article>
+    <article class="card rv"><div class="im"><img src="images/tkt 2.jpg" alt=""></div><div class="cb"><span class="chip">Terminale – Saint-Aspais</span><h3>Infrastructure réseau d’une salle</h3><p>Avec ma classe, nous avons réalisé l’architecture réseau d’une salle de classe : 3 pôles, chacun avec un switch, reliés à un routeur puis au réseau interne du lycée. Un serveur hébergeait plusieurs services : DHCP, Active Directory.</p><a class="btn" href="lycee.html">Information sur le projet !</a></div></article>
+    <article class="card rv"><div class="im"><img src="images/tkt 3.jpg" alt=""></div><div class="cb"><span class="chip">Architecture LAN – CTF</span><h3>Réseau pour un CTF (Capture The Flag)</h3><p>En terminale, nous avons réalisé en groupe une architecture LAN de 4 pôles : chaque pôle avec deux switchs en Etherchannel pour la redondance, et un routeur configuré avec un DHCP par pôle. Les pôles sont interconnectés via un switch central et un serveur.</p><a class="btn" href="lycee.html">Information sur le projet !</a></div></article>
+    <article class="card wide rv"><div class="im"><img src="images/site-jeux.png" alt="Aperçu du site de jeux" style="object-position:top"></div><div class="cb"><span class="chip">Mini-projet du BAC</span><h3>Site internet de jeux</h3><p>Pour valider mon BAC, j’ai réalisé un site internet de jeux, ce qui m’a permis d’apprendre le HTML/CSS et le JavaScript. Je l’ai développé avec Visual Studio Code. Ci-contre, un aperçu de l’accueil du site.</p></div></article>
+  </div>
+  <div class="rv" style="text-align:center;margin-top:44px"><a class="btn" href="lycee.html" style="background:var(--nav);color:#fff;padding:14px 34px">Voir toute mes projets →</a></div>
+</div></section>
+
+<section class="alt" id="stages"><div class="w">
+  <div class="rv"><span class="eyebrow">Expérience professionnelle</span><h2>Pourquoi des stages ?</h2>
+  <p class="lead">Durant mes années de lycée, j’ai pu réaliser différents stages dans plusieurs domaines. Ils m’ont permis de mieux connaître les différents domaines de l’informatique, d’acquérir des connaissances dans plusieurs secteurs et de mieux savoir lequel me passionne le plus.</p></div>
+  <div class="tl">
+    <div class="it rv"><div><small>18 mai 2026 → 26 juin 2026 . 6 semaines</small><h3>Circor Industria</h3><p>J’ai pu effectuer un stage au sein de l’entreprise Circor Industria. J’ai pu en apprendre plus sur tout ce qui touche à l’infrastructure réseau surtout la téléphonie IP que j'ai pu configurer.</p><a class="btn" href="pdf/AGNUS Julien-SIO1-Rapport de stage.pdf" style="margin-top:14px;background:var(--btn)">Voir le rapport !</a></div><img src="images/AGNUS Julien-SIO1-Rapport de stage.png" alt="FM Logistic"></div>
+    <div class="it rv"><div><small>2 déc. 2024 → 24 janv. 2025 · 6 semaines</small><h3>SNCF Réseau</h3><p>Stage auprès de l’équipe de la Gare de l’Est à Paris, pour en apprendre plus sur l’infrastructure réseau, surtout les switchs. Un rapport détaille une des activités réalisées.</p><a class="btn" href="pdf/Rapport PFMP - 2 décembre au 24 janvier - SNCF - Terminal SN.pdf" style="margin-top:14px;background:var(--btn)">Voir le rapport !</a></div><img src="images/sncf.png" alt="Gare de l’Est"></div>
+    <div class="it rv"><div><small>3 stages de 4 semaines · lycée</small><h3>AMMI Informatique</h3><p>Au Mée-sur-Seine (Seine-et-Marne) : maintenance de matériel informatique, principalement des ordinateurs.</p></div><img src="images/ammi.png" alt="AMMI Informatique"></div>
+  </div>
+   <div class="rv" style="text-align:center;margin-top:44px"><a class="btn" href="stages.html" style="background:var(--nav);color:#fff;padding:14px 34px">Voir toute mes stages →</a></div>
+</div></section>
+
+<section id="formations"><div class="w two rv">
+  <div><span class="eyebrow">Certification et formation</span><h2>Diplômes</h2>
+    <div class="row"><div><b>Brevet de Technicien Supérieur SIO</b> option SISR<em>(solutions d'infrastructure, systèmes et réseaux)<br>Campus Saint-Aspais de Melun</em><span class="ok">En Cours</span></div></div>
+    <div class="row"><div><b>Baccalauréat Professionnel SN</b> option RISC<em>(Système Numérique, Réseau Informatique et Système Communicant)<br>Institution Saint-Aspais de Melun</em><span class="ok">Admis mention bien</span></div></div>
+    <div class="row"><div><b>Brevet</b><em>Institution Sainte Jeanne d’Arc de Melun</em><span class="ok">Admis mention assez bien</span></div></div></div>
+    
+    
+  <div><span class="eyebrow">&nbsp;</span><h2>Certifications</h2>
+    <div class="row"><img src="images/anssi.png" alt="ANSSI"><div><b>MOOC ANSSI</b><br><a href="https://secnumacademie.gouv.fr/">secnumacademie.gouv.fr</a><br><a class="btn" href="#">Télécharger ma certification !</a></div></div>
+    <div class="row"><img src="images/cisco.png" alt="Cisco"><div><b>Introductionn à la cybersécurité</b><br><a href="https://www.netacad.com/fr/">netacad.com/fr</a><br><a class="btn" href="pdf/Introduction_to_Cybersecurity_certificate_agnusjulien-gmail-com_8bdf3608-7ade-40d0-bf8c-0e1e8720f1c6.pdf">Télécharger ma certification !</a></div></div>
+    <div class="row"><img src="images/cisco.png" alt="Cisco"><div><b>Linux Unhatched</b><br><a href="https://www.netacad.com/fr/">netacad.com/fr</a><br><a class="btn" href="pdf/Linux_Unhatched_certificate_agnusjulien-gmail-com_bab988ee-018e-462a-8992-958118daf9d8.pdf">Télécharger ma certification !</a></div></div>
+    <div class="row"><img src="images/ccna_600.png" alt="CCNA"><div><b>CCNA (En cours)</b><br><a href="https://www.netacad.com/fr/">netacad.com/fr</a></div></div>
+  <div class="row"><img src="images/OIP.jpg" alt="CCNA"><div><b>Réalisez un test d'intrusion web sur OpenClassRooms</b><br><a href="https://openclassrooms.com/fr/courses/7727176-realisez-un-test-d-intrusion-web">Open ClassRooms</a></div></div></div>
+  </div></section>
+
+<section class="blue" id="competences"><div class="w two rv" id="sk">
+  <div><span class="eyebrow">Savoir-faire</span><h2>Techniques</h2>
+    <div class="bar"><span>HTML/CSS<em>71 %</em></span><i><b style="--v:71%"></b></i></div>
+    <div class="bar"><span>Linux (Debian, Ubuntu, Kali…)<em>40 %</em></span><i><b style="--v:40%"></b></i></div>
+    <div class="bar"><span>Virtualisation<em>45 %</em></span><i><b style="--v:45%"></b></i></div>
+    <div class="bar"><span>Cisco Packet Tracer<em>68 %</em></span><i><b style="--v:68%"></b></i></div></div>
+  <div><span class="eyebrow">Outils</span><h2>Logiciels maîtrisés</h2>
+    <div class="chips"><div class="sw"><img src="images/packet.png" alt="">Cisco Packet Tracer</div><div class="sw"><img src="images/vscode.png" alt="">Visual Studio Code</div><div class="sw"><img src="images/virtualbox.jpg" alt="">Virtual Box</div><div class="sw"><img src="images/trello.jpg" alt="">Trello</div></div></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="w rv"><span class="eyebrow" style="color:var(--bleu)">Parlons-en</span><h2>Me contacter</h2><div class="cg" style="margin-top:34px">
+  <div class="box"><h3>Contacts</h3><div class="ct"><img src="images/" alt="">06 52 00 15 03</div><div class="ct"><img src="images/mail.png" alt=""><a href="mailto:agnusjulien@gmail.com">agnusjulien@gmail.com</a></div><a href="https://www.linkedin.com/in/julien-agnus/"><div class="ct"><img src="images/linkedin.png" alt="">https://www.linkedin.com/in/julien-agnus/</div></a></div>
+  <div class="box"><h3>Liens importants</h3><a class="btn" href="https://institutionsaintaspais.fr/campus/">Vers le campus</a><a class="btn" href="https://creg.ac-versailles.fr/IMG/pdf/bts_servicesinformatiquesorganisations.pdf">Vers le Référentiel BTS SIO</a></div>
+</div></div></section>
+<footer>© 2025 Portfolio. Conçu et développé par Julien AGNUS. Tous droits réservés.</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const links=[...document.querySelectorAll('nav li a')];
+const so=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.hash==='#'+x.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('[id]').forEach(s=>{if(links.some(a=>a.hash==='#'+s.id))so.observe(s)});
+</script>
+</body>
+</html>
